@@ -65,12 +65,22 @@ section {
   }
   
   @media (max-width: 768px) {
-    ul {
-      flex-direction: column;
+    section {
+      ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        li {
+          max-width: 100%;
+        }
+      }
     }
-    
-    li {
-      flex: 1 1 100%;
-    }
+  }
+  @media (max-width: 480px) {
+    section {
+      ul {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+    } 
   }
 }
